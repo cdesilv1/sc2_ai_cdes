@@ -157,30 +157,17 @@ class Optimizer(threading.Thread):
 
 
 def main(unused_argv):
+	#____________________HYPERPARAMETERS_________________
 	RUN_TIME = 999999
 	THREADS = 8
 	OPTIMIZERS = 2
 	THREAD_DELAY = 0.001
-
-	GAMMA = 0.99
-
-	N_STEP_RETURN = 8
-	GAMMA_N = GAMMA ** N_STEP_RETURN
-
-	EPS_START = 0.4
-	EPS_STOP  = .15
+	EPS_START = 0.05
+	EPS_STOP  = .02
 	EPS_STEPS = 3000
-
 	MIN_BATCH = 32
-	LEARNING_RATE = 5e-3
-
-	LOSS_V = .5			# v loss coefficient
-	LOSS_ENTROPY = .01 	# entropy coefficient
 	"""Run an agent."""
-
-	NUM_STATE = 12
-	NUM_ACTIONS = 8
-	NONE_STATE = np.zeros(NUM_STATE)
+	#____________________HYPERPARAMETERS_END_________________
 
 	stopwatch.sw.enabled = FLAGS.profile or FLAGS.trace
 	stopwatch.sw.trace = FLAGS.trace

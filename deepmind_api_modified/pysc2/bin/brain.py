@@ -7,34 +7,17 @@ from keras import backend as K
 import os
 import numpy as np
 
+	#____________________HYPERPARAMETERS_________________
 NUM_STATE = 12
 NUM_ACTIONS = 8
 NONE_STATE = np.zeros(NUM_STATE)
-RUN_TIME = 30
-THREADS = 8
-OPTIMIZERS = 2
-THREAD_DELAY = 0.001
-
-GAMMA = 0.99
-
-N_STEP_RETURN = 8
-GAMMA_N = GAMMA ** N_STEP_RETURN
-
-EPS_START = 0.05
-EPS_STOP  = .02
-EPS_STEPS = 75000
-
-MIN_BATCH = 32
 LEARNING_RATE = 5e-4
-
 LOSS_V = .5			# v loss coefficient
 LOSS_ENTROPY = .01 	# entropy coefficient
+	#____________________HYPERPARAMETERS_END_________________
 
 class Brain:
 
-	NUM_STATE = 12
-	NUM_ACTIONS = 8
-	NONE_STATE = np.zeros(NUM_STATE)
 
 	train_queue = [ [], [], [], [], [] ]	# s, a, r, s', s' terminal mask
 	lock_queue = threading.Lock()
