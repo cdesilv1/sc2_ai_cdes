@@ -70,24 +70,13 @@ for mm_x in range(0, 64):
 			smart_actions.append(ACTION_ATTACK + '_' + str(mm_x - 16) + '_' + str(mm_y - 16))
 
 
-EPS_START = 0.05
-EPS_STOP  = .02
-EPS_STEPS = 75000
 
+	#____________________HYPERPARAMETERS_________________
 GAMMA = 0.99
-
 N_STEP_RETURN = 8
 GAMMA_N = GAMMA ** N_STEP_RETURN
+	#____________________HYPERPARAMETERS_END_________________
 
-EPS_START = 0.4
-EPS_STOP  = .15
-EPS_STEPS = 75000
-
-MIN_BATCH = 32
-LEARNING_RATE = 5e-4
-
-LOSS_V = .5			# v loss coefficient
-LOSS_ENTROPY = .01 	# entropy coefficient
 
 frames = 0
 class Agent:
