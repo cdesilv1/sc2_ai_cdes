@@ -31,6 +31,8 @@ from pysc2.lib import stopwatch
 from s2clientprotocol import common_pb2 as sc_common
 from s2clientprotocol import sc2api_pb2 as sc_pb
 
+import os
+
 sw = stopwatch.sw
 
 
@@ -140,8 +142,8 @@ class SC2Env(environment.Base):
              discount=1.,
              visualize=False,
              step_mul=None,
-             save_replay_episodes=0,
-             replay_dir=None,
+             save_replay_episodes=1,
+             replay_dir=os.path.abspath("StarcraftII/Replays/partest"),
              game_steps_per_episode=None,
              score_index=None,
              score_multiplier=None):
@@ -313,6 +315,11 @@ class SC2Env(environment.Base):
                                       reward=r * self._score_multiplier,
                                       discount=discount, observation=o)
                  for r, o in zip(reward, agent_obs))
+
+  # def save_replay(self, replay_dir):
+  #   replay_path = self._run_config.save_replay(
+  #       self._controllers[0].save_replay(), replay_dir, self._map.name)
+  #   logging.info("Wrote replay to: %s", replay_path)
 
   def save_replay(self, replay_dir):
     replay_path = self._run_config.save_replay(

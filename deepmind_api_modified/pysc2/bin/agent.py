@@ -70,7 +70,7 @@ flags.DEFINE_bool("profile", False, "Whether to turn on code profiling.")
 flags.DEFINE_bool("trace", False, "Whether to trace the code execution.")
 flags.DEFINE_integer("parallel", 1, "How many instances to run in parallel.")
 
-flags.DEFINE_bool("save_replay", False, "Whether to save a replay at the end.")
+flags.DEFINE_bool("save_replay", True, "Whether to save a replay at the end.")
 
 flags.DEFINE_string("map", "Simple64", "Name of a map to use.")
 flags.mark_flag_as_required("map")
@@ -101,8 +101,8 @@ class Environment(threading.Thread):
 			env = available_actions_printer.AvailableActionsPrinter(env)
 		agent = agent_cls(mybrain)
 		run_loop.run_loop([agent], env, FLAGS.max_agent_steps)
-		if FLAGS.save_replay:
-			env.save_replay(agent_cls.__name__)
+		# if FLAGS.save_replay:
+		env.save_replay(self.agent_cls.__name__)
 
 	def runEpisode(self):
 		THREAD_DELAY = 0.001
@@ -162,8 +162,8 @@ def main(unused_argv):
 	THREADS = 8
 	OPTIMIZERS = 2
 	THREAD_DELAY = 0.001
-	EPS_START = 0.05
-	EPS_STOP  = .02
+	EPS_START = 0.02
+	EPS_STOP  = .01
 	EPS_STEPS = 3000
 	MIN_BATCH = 32
 	"""Run an agent."""
