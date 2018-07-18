@@ -52,7 +52,7 @@ The players in the game also exist under unknown conditions to each other unless
 ![](pictures/avg_by_100_initial.png)
 
 ### Fig(b)
-![](pictures/avg_by_100_returned_2018_07_02.png)
+![](pictures/avg_by_100_retuned_2018_07_02.png)
 ### An Untrained Agent  
 [![Starcraft II Untrained A3C Agent 2018 07 06](pictures/untrained_a3c_2018_07_06.png)](https://youtu.be/sZT1rxlckjo)
 
