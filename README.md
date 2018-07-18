@@ -49,10 +49,10 @@ There are 3 unique races in the game that vary from each other in how they opera
 The players in the game also exist under unknown conditions to each other unless they have vision of the other player (which their units provide in a circle around them of limited range).  The game is also constantly being rebalanced with unit properties changing from season to season.  In addition to all of the fore-mentioned features, because the game in real-time, a player who thinks and moves faster and more accurately will be rewarded.  All of these factors lead to an incredibly complex game with a number of unique game states that are essentially infinite.  
 
 ### Fig(a)
-![](https://github.com/cdesilv1/sc2_ai_cdes/tree/master/pictures/avg_by_100_initial.png "Fig(a)")
+![](https://github.com/cdesilv1/sc2_ai_cdes/tree/master/pictures/avg_by_100_initial.png)
 
 ### Fig(b)
-![](https://github.com/cdesilv1/sc2_ai_cdes/tree/master/pictures/avg_by_100_returned_2018_07_02.png "Fig(b)")
+![](https://github.com/cdesilv1/sc2_ai_cdes/tree/master/pictures/avg_by_100_returned_2018_07_02.png)
 ### An Untrained Agent  
 [![Starcraft II Untrained A3C Agent 2018 07 06](pictures/untrained_a3c_2018_07_06.png)](https://youtu.be/sZT1rxlckjo)
 
